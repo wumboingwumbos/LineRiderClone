@@ -2,17 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class line : MonoBehaviour
+public class Line : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public LineRenderer lineRenderer;
+    public EdgeCollider2D edgeCol;
+
+    List<Vector2> points;
+
+    public void UpdateLine(Vector2 mousePos)
     {
-        
+        if (points == null)
+        {
+            points = new List<Vector2>();
+            SetPoints(mousePos);
+            return;
+        }
+
+        if (Vector2.Distance(points[points.Count - 1],mousePos) > .1f)
+        {
+            SetPoints(mousePos);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void SetPoints (Vector2 point)
     {
-        
+        points.Add(point);
+
+        lineRenderer.numPositions = points.Count;
+        lineRenderer.SetPosition(points.Count - 1, point);
+
+        if (points.Count > 1)
+        {
+            edgeCol.points = points.ToArray();
+        }
     }
 }
