@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 995571254}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45902723, y: 0.24651432, z: -0.039527252}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 2120301241}
   - component: {fileID: 2120301240}
   - component: {fileID: 2120301239}
+  - component: {fileID: 2120301243}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -288,7 +289,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 2120301238}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2334a00f7a822fd48940c8c8426bd133, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -330,7 +331,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.34
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2334a00f7a822fd48940c8c8426bd133, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -408,6 +409,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2120301243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120301238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e95633f1e5b9f44b3fd5e4c78acfb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2120301240}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

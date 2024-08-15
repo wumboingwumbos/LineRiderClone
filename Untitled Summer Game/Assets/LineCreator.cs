@@ -7,6 +7,7 @@ public class LineCreator : MonoBehaviour
     public GameObject linePrefab;
 
     Line activeLine;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -19,6 +20,7 @@ public class LineCreator : MonoBehaviour
         {
             activeLine = null;
         }
+
         if (activeLine != null)
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

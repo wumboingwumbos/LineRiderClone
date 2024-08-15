@@ -9,7 +9,7 @@ public class Line : MonoBehaviour
 
     List<Vector2> points;
 
-    public void UpdateLine(Vector2 mousePos)
+    public void UpdateLine (Vector2 mousePos)
     {
         if (points == null)
         {
@@ -28,7 +28,7 @@ public class Line : MonoBehaviour
     {
         points.Add(point);
 
-        lineRenderer.numPositions = points.Count;
+        lineRenderer.positionCount = points.Count;
         lineRenderer.SetPosition(points.Count - 1, point);
 
         if (points.Count > 1)
