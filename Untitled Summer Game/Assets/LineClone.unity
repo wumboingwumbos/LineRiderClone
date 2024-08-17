@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a8607e18b787f488798b7c58383726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linePrefab: {fileID: 6945975210000702892, guid: e8d94a2334f7e6d4bbfbb446b21f39d7, type: 3}
+  linePrefab: {fileID: 6945975210000702892, guid: 042cb593045b8084795bdf6da9d0df7e, type: 3}
 --- !u!4 &995571256
 Transform:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!212 &2120301241
 SpriteRenderer:

@@ -26,5 +26,9 @@ public class LineCreator : MonoBehaviour
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             activeLine.UpdateLine(mousePos);
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Destroy(activeLine);
+        }
     }
 }

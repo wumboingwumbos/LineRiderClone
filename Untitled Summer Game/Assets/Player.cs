@@ -5,12 +5,25 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Rigidbody2D rb;
+    bool start = false;
 
     void Update ()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            if (!start)
+            {
+                rb.position = Vector2.zero;
+                rb.rotation = 0;
+                rb.bodyType = RigidbodyType2D.Dynamic;
+                start = true;
+            }
+            else
+            {
+                rb.bodyType = RigidbodyType2D.Static;
+                
+                start = false;
+            }
         }
     }
 }
