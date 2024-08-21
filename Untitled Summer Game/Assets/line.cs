@@ -9,23 +9,23 @@ public class Line : MonoBehaviour
 
     List<Vector2> points;
 
-    public void UpdateLine (Vector2 mousePos)
+    public void updateLine (Vector2 mousePos)
     {
         if (points == null)
         {
             points = new List<Vector2>();
-            SetPoints(mousePos);
+            setPoints(mousePos);
             return;
         }
 
         if (Vector2.Distance(points[points.Count - 1],mousePos) > .1f)
         {
-            SetPoints(mousePos);
+            setPoints(mousePos);
         }
         
     }
 
-    void SetPoints (Vector2 point)
+    void setPoints(Vector2 point)
     {
         points.Add(point);
 
