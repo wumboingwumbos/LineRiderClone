@@ -42,8 +42,13 @@ public class Player : MonoBehaviour
     }
     public void Reset()
     {
-        rb.bodyType = RigidbodyType2D.Dynamic;
+        if (rb.bodyType == RigidbodyType2D.Dynamic)
+            rb.velocity = Vector2.zero;
         rb.position = spawn;
         rb.rotation = 0;
+        
+        
+       
+       
     }
 }

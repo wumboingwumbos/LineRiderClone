@@ -5,6 +5,10 @@ using UnityEngine;
 public class LineCreator : MonoBehaviour
 {
     public GameObject linePrefab;
+    public GameObject lineBoost;
+    public GameObject lineBounce;
+    public GameObject lineNormal;
+
 
     Line activeLine;
     List<GameObject> allLines = new List<GameObject>();
@@ -31,10 +35,28 @@ public class LineCreator : MonoBehaviour
         {
             clearLastLine();
         }
+        if (Input.GetKeyDown("1"))
+            setNormal();
+        if (Input.GetKeyDown("2")) 
+            setBoost();
+        if (Input.GetKeyDown("3")) 
+            setBouncy();
     }
     public void clearLastLine()
     {
         Destroy(allLines[allLines.Count - 1]);
         allLines.RemoveAt(allLines.Count - 1);
+    }
+    public void setBouncy()
+    {
+        linePrefab = lineBounce;
+    }
+    public void setNormal()
+    {
+        linePrefab = lineNormal;
+    }
+    public void setBoost()
+    {
+        linePrefab = lineBoost;
     }
 }
